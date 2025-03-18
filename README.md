@@ -1,38 +1,62 @@
-# sv
+AWS Savings Dashboard
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+This project is a frontend dashboard built using SvelteKit, Tailwind CSS, and @carbon/charts-svelte to visualize AWS savings data.
 
-## Creating a project
+📌 Features
 
-If you're seeing this, you've probably already done this step. Congrats!
+Interactive charts for AWS cost savings visualization
 
-```bash
-# create a new project in the current directory
-npx sv create
+Built with SvelteKit for a fast and reactive UI
 
-# create a new project in my-app
-npx sv create my-app
-```
+Styled using Tailwind CSS
 
-## Developing
+Uses @carbon/charts-svelte for data visualization
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Mock data used due to CORS restrictions on the API
 
-```bash
-npm run dev
+🚀 Getting Started
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+Prerequisites
 
-## Building
+Ensure you have the following installed:
 
-To create a production version of your app:
+Node.js (LTS recommended)
 
-```bash
-npm run build
-```
+pnpm (or npm/yarn)
 
-You can preview the production build with `npm run preview`.
+Installation
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Clone the repository and install dependencies:
+
+# Clone the repository
+git clone <repo_url>
+cd aws-savings-dashboard
+
+# Install dependencies
+pnpm install  # or npm install / yarn install
+
+Running the Project
+
+Start the development server:
+
+pnpm dev  # or npm run dev / yarn dev
+
+The app will be available at http://localhost:5173 (default Vite port).
+
+Building for Production
+
+To generate a production build:
+
+pnpm build  # or npm run build / yarn build
+
+To preview the production build:
+
+pnpm preview  # or npm run preview / yarn preview
+
+🎨 Figma Design: https://www.figma.com/design/oxiNJQEtFgPhEmliBQEED1/NorthKit?node-id=13-3&t=ITnwDH5jS7XXf4TP-0
+
+📊 Data Handling
+
+Since the API was throwing CORS errors, the data is currently being represented as a mock object instead of fetching it from an API.
+
+Once the API allows CORS or a proxy is set up, you can replace the mock data with actual API requests.
